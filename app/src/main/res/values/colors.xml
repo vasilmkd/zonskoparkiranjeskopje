@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#3F51B5</color>
+    <color name="primaryDark">#303F9F</color>
+    <color name="accent">#FF4081</color>
+
+    <color name="translucent">#4000</color>
+    <color name="translucent_light">#2000</color>
+    <color name="transparent">#0000</color>
+
+    <color name="divider">#1F000000</color>
+    <color name="indicator_unselected">#80000000</color>
+
+    <color name="parking_red">#B71C1C</color>
+    <color name="parking_yellow">#F57F17</color>
+    <color name="parking_green">#1B5E20</color>
+    <color name="parking_white">#9E9E9E</color>
+
+    <color name="text_dark">#DE000000</color>
+    <color name="text_light">#FFFFFF</color>
+
+    <color name="text_button_disabled">#42000000</color>
+
+    <color name="white">#FFF</color>
+
+</resources>

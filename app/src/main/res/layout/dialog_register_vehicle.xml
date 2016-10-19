@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragment.RegisterVehicleDialogFragment">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dialog_padding_start"
+        android:layout_marginStart="@dimen/dialog_padding_start"
+        android:layout_marginRight="@dimen/dialog_padding_start"
+        android:layout_marginEnd="@dimen/dialog_padding_start"
+        android:layout_marginTop="@dimen/dialog_padding_top"
+        app:hintEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_car_name"
+            android:inputType="textCapWords"
+            android:imeOptions="actionNext"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_licence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dialog_padding_start"
+        android:layout_marginStart="@dimen/dialog_padding_start"
+        android:layout_marginRight="@dimen/dialog_padding_start"
+        android:layout_marginEnd="@dimen/dialog_padding_start"
+        app:hintEnabled="true"
+        app:errorEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_text_licence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_licence_plate"
+            android:inputType="textCapCharacters"
+            android:imeOptions="actionDone"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="@dimen/dialog_button_margin_start"
+        android:layout_marginEnd="@dimen/dialog_button_margin_start"
+        android:layout_marginBottom="@dimen/dialog_button_margin_top"
+        style="@style/ColoredBorderlessButton"
+        android:text="@string/ok"
+        android:enabled="false"/>
+
+</LinearLayout>

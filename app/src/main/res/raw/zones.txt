@@ -1,0 +1,10 @@
+<zones>
+    <zone>
+        <name>Скопје</name>
+        <code>A1</code>
+        <latitude>41.993691</latitude>
+        <longitude>21.419274</longitude>
+        <cost>50</cost>
+        <hours>2</hours>
+    </zone>
+</zones>

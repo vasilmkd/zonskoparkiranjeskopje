@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/text_view_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_padding_start"
+            android:layout_marginStart="@dimen/item_padding_start"
+            android:layout_marginRight="@dimen/item_text_margin_end"
+            android:layout_marginEnd="@dimen/item_text_margin_end"
+            android:layout_marginTop="@dimen/item_padding_top"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            tools:text="17:58"/>
+
+        <TextView
+            android:id="@+id/text_view_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_time"
+            android:layout_marginLeft="@dimen/item_padding_start"
+            android:layout_marginStart="@dimen/item_padding_start"
+            android:layout_marginRight="@dimen/item_text_margin_end"
+            android:layout_marginEnd="@dimen/item_text_margin_end"
+            android:layout_marginTop="@dimen/item_car_margin_top"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:text="Ford Fusion (SK123CD)"/>
+
+        <TextView
+            android:id="@+id/text_view_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_car"
+            android:layout_marginLeft="@dimen/item_padding_start"
+            android:layout_marginStart="@dimen/item_padding_start"
+            android:layout_marginRight="@dimen/item_text_margin_end"
+            android:layout_marginEnd="@dimen/item_text_margin_end"
+            android:layout_marginTop="@dimen/item_zone_margin_top"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="Југодрво"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_placeholder_divider_height"
+            android:layout_below="@id/text_view_zone"
+            android:layout_marginTop="@dimen/item_padding_top"/>
+
+        <TextView
+            android:id="@+id/text_view_code"
+            android:layout_width="@dimen/item_image_dimen"
+            android:layout_height="@dimen/item_image_dimen"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/divider"
+            android:layout_marginRight="@dimen/item_padding_start"
+            android:layout_marginEnd="@dimen/item_padding_start"
+            android:background="@drawable/code_background"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:text="A1"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_button_bar_height"
+        android:background="@color/divider">
+
+        <Button
+            android:id="@+id/button_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginLeft="@dimen/item_button_bar_padding_start"
+            android:layout_marginStart="@dimen/item_button_bar_padding_start"
+            style="@style/ColoredBorderlessButton"
+            android:text="@string/end"/>
+
+        <TextView
+            android:id="@+id/text_view_time_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="@dimen/item_button_bar_padding_end"
+            android:layout_marginEnd="@dimen/item_button_bar_padding_end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="преостанува 0:17"/>
+
+    </FrameLayout>
+
+</LinearLayout>

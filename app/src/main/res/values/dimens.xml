@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+
+    <dimen name="intro_toolbar_padding">16dp</dimen>
+    <dimen name="indicator_dimen">8dp</dimen>
+    <dimen name="indicator_margin">8dp</dimen>
+    <dimen name="intro_image_view_dimen">180dp</dimen>
+    <dimen name="intro_text_view_margin_start">16dp</dimen>
+
+    <dimen name="recycler_view_padding_top">8dp</dimen>
+    <dimen name="recycler_view_padding_bottom">88dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="dialog_padding_start">24dp</dimen>
+    <dimen name="dialog_padding_top">20dp</dimen>
+    <dimen name="dialog_button_margin_start">12dp</dimen>
+    <dimen name="dialog_button_margin_top">4dp</dimen>
+
+    <dimen name="item_padding_start">16dp</dimen>
+    <dimen name="item_padding_top">16dp</dimen>
+    <dimen name="item_car_margin_top">8dp</dimen>
+    <dimen name="item_zone_margin_top">4dp</dimen>
+    <dimen name="item_placeholder_divider_height">0dp</dimen>
+    <dimen name="item_image_dimen">40dp</dimen>
+    <dimen name="item_button_bar_height">?attr/actionBarSize</dimen>
+    <dimen name="item_button_bar_padding_start">8dp</dimen>
+    <dimen name="item_button_bar_padding_end">16dp</dimen>
+
+    <dimen name="detail_toolbar_margin_top">0dp</dimen>
+    <dimen name="detail_scroll_view_margin_top">0dp</dimen>
+    <dimen name="detail_map_height">224dp</dimen>
+    <dimen name="detail_tile_height">72dp</dimen>
+    <dimen name="detail_image_view_dimen">24dp</dimen>
+    <dimen name="detail_image_view_margin_start">16dp</dimen>
+    <dimen name="detail_text_view_margin_start">72dp</dimen>
+    <dimen name="detail_text_view_margin_end">16dp</dimen>
+    <dimen name="detail_text_view_margin_top">16dp</dimen>
+    <dimen name="detail_tile_margin">16dp</dimen>
+    <dimen name="permission_tile_padding">16dp</dimen>
+    <dimen name="permission_message_margin_top">48dp</dimen>
+    <dimen name="permission_tile_height">156dp</dimen>
+    <dimen name="permission_button_padding">0dp</dimen>
+    <dimen name="item_text_margin_end">72dp</dimen>
+    <dimen name="detail_app_bar_elevation">0dp</dimen>
+
+</resources>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:navigationIcon="@drawable/ic_close"
+            app:navigationContentDescription="@string/parking_navigation_content_description"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/detail_tile_margin"
+                android:layout_marginEnd="@dimen/detail_tile_margin"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+                <FrameLayout
+                    android:id="@+id/tile_location_permission"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/permission_tile_height"
+                    android:background="?attr/colorAccent"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/detail_image_view_dimen"
+                        android:layout_height="@dimen/detail_image_view_dimen"
+                        android:layout_marginLeft="@dimen/permission_tile_padding"
+                        android:layout_marginStart="@dimen/permission_tile_padding"
+                        android:layout_marginTop="@dimen/permission_tile_padding"
+                        app:srcCompat="@drawable/ic_location"
+                        android:contentDescription="@string/location_permission_content_description"
+                        tools:ignore="MissingPrefix"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginRight="@dimen/permission_tile_padding"
+                        android:layout_marginEnd="@dimen/permission_tile_padding"
+                        android:layout_marginTop="@dimen/permission_tile_padding"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
+                        android:text="@string/location_unavailable"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginRight="@dimen/permission_tile_padding"
+                        android:layout_marginEnd="@dimen/permission_tile_padding"
+                        android:layout_marginTop="@dimen/permission_message_margin_top"
+                        android:maxLines="3"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                        android:text="@string/location_unavailable_message"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginBottom="48dp"/>
+
+                    <Button
+                        android:id="@+id/button_location_permission"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:gravity="start|center_vertical"
+                        android:paddingLeft="@dimen/permission_button_padding"
+                        android:paddingStart="@dimen/permission_button_padding"
+                        android:paddingRight="@dimen/permission_button_padding"
+                        android:paddingEnd="@dimen/permission_button_padding"
+                        android:textColor="@color/white"
+                        android:text="@string/turn_on"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/tile_zone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/detail_tile_height"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/image_view_zone"
+                        android:layout_width="@dimen/detail_image_view_dimen"
+                        android:layout_height="@dimen/detail_image_view_dimen"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/detail_image_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_image_view_margin_start"
+                        app:srcCompat="@drawable/ic_location"
+                        android:contentDescription="@string/car_content_description"
+                        tools:ignore="MissingPrefix"/>
+
+                    <TextView
+                        android:id="@+id/text_view_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginRight="@dimen/detail_text_view_margin_end"
+                        android:layout_marginEnd="@dimen/detail_text_view_margin_end"
+                        android:layout_marginTop="@dimen/detail_text_view_margin_top"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                        android:text="@string/zone_not_found"/>
+
+                    <TextView
+                        android:id="@+id/text_view_zone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginRight="@dimen/detail_text_view_margin_end"
+                        android:layout_marginEnd="@dimen/detail_text_view_margin_end"
+                        android:layout_marginBottom="@dimen/detail_text_view_margin_top"
+                        android:maxLines="1"
+                        android:text="@string/zone_not_found_message"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:layout_gravity="bottom"
+                        android:background="@color/divider"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/detail_tile_height">
+
+                    <ImageView
+                        android:id="@+id/image_view_time"
+                        android:layout_width="@dimen/detail_image_view_dimen"
+                        android:layout_height="@dimen/detail_image_view_dimen"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/detail_image_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_image_view_margin_start"
+                        app:srcCompat="@drawable/ic_clock"
+                        android:contentDescription="@string/cost_content_description"
+                        tools:ignore="MissingPrefix"/>
+
+                    <TextView
+                        android:id="@+id/text_view_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginRight="@dimen/detail_text_view_margin_end"
+                        android:layout_marginEnd="@dimen/detail_text_view_margin_end"
+                        android:layout_marginTop="@dimen/detail_text_view_margin_top"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+
+                    <TextView
+                        android:id="@+id/text_view_cost_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginRight="@dimen/detail_text_view_margin_end"
+                        android:layout_marginEnd="@dimen/detail_text_view_margin_end"
+                        android:layout_marginBottom="@dimen/detail_text_view_margin_top"
+                        android:maxLines="1"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:layout_gravity="bottom"
+                        android:background="@color/divider"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/detail_tile_margin"
+                android:layout_marginStart="@dimen/detail_tile_margin"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+                <FrameLayout
+                    android:id="@+id/tile_sms_permission"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/permission_tile_height"
+                    android:background="?attr/colorAccent"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/detail_image_view_dimen"
+                        android:layout_height="@dimen/detail_image_view_dimen"
+                        android:layout_marginLeft="@dimen/permission_tile_padding"
+                        android:layout_marginStart="@dimen/permission_tile_padding"
+                        android:layout_marginTop="@dimen/permission_tile_padding"
+                        app:srcCompat="@drawable/ic_sms"
+                        android:contentDescription="@string/location_permission_content_description"
+                        tools:ignore="MissingPrefix"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginRight="@dimen/permission_tile_padding"
+                        android:layout_marginEnd="@dimen/permission_tile_padding"
+                        android:layout_marginTop="@dimen/permission_tile_padding"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
+                        android:text="@string/sms_unavailable"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginRight="@dimen/permission_tile_padding"
+                        android:layout_marginEnd="@dimen/permission_tile_padding"
+                        android:layout_marginTop="@dimen/permission_message_margin_top"
+                        android:maxLines="3"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                        android:text="@string/sms_unavailable_message"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginBottom="48dp"/>
+
+                    <Button
+                        android:id="@+id/button_sms_permission"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:gravity="start|center_vertical"
+                        android:paddingLeft="@dimen/permission_button_padding"
+                        android:paddingStart="@dimen/permission_button_padding"
+                        android:paddingRight="@dimen/permission_button_padding"
+                        android:paddingEnd="@dimen/permission_button_padding"
+                        android:textColor="@color/white"
+                        android:text="@string/turn_on"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/tile_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/detail_tile_height"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/image_view_car"
+                        android:layout_width="@dimen/detail_image_view_dimen"
+                        android:layout_height="@dimen/detail_image_view_dimen"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/detail_image_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_image_view_margin_start"
+                        app:srcCompat="@drawable/ic_car_small"
+                        android:contentDescription="@string/time_content_description"
+                        tools:ignore="MissingPrefix"/>
+
+                    <TextView
+                        android:id="@+id/text_view_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginRight="@dimen/detail_text_view_margin_end"
+                        android:layout_marginEnd="@dimen/detail_text_view_margin_end"
+                        android:layout_marginTop="@dimen/detail_text_view_margin_top"
+                        android:maxLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+
+                    <TextView
+                        android:id="@+id/text_view_licence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/detail_text_view_margin_start"
+                        android:layout_marginStart="@dimen/detail_text_view_margin_start"
+                        android:layout_marginRight="@dimen/detail_text_view_margin_end"
+                        android:layout_marginEnd="@dimen/detail_text_view_margin_end"
+                        android:layout_marginBottom="@dimen/detail_text_view_margin_top"
+                        android:maxLines="1"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:layout_gravity="bottom"
+                        android:background="@color/divider"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

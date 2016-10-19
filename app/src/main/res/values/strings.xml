@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zonsko Parkiranje Skopje</string>
+    <string name="app_name_mkd" translatable="false">Зонско Паркирање Скопје</string>
+
+    <string name="button_skip">Прескокни</string>
+    <string name="button_finish">Напред</string>
+
+    <string name="register_vehicle">Регистрирај возило</string>
+    <string name="find_parking">Пронајди паркинг место</string>
+    <string name="pay_parking">Плати паркинг брзо и лесно</string>
+
+    <string name="hint_car_name">Име на возило</string>
+    <string name="hint_licence_plate">Регистарска табличка (AB123CD)</string>
+
+    <string name="action_settings">Нагодувања</string>
+
+    <string name="activity_home_label">Паркирања</string>
+
+    <string name="current_parking">ТЕКОВНИ</string>
+    <string name="past_parking">МИНАТИ</string>
+
+    <string name="end">заврши</string>
+    <string name="remaining">Преостанува</string>
+
+    <string name="time_period_now">Сега</string>
+    <string name="time_period_minutes">мин.</string>
+    <string name="time_period_hours">ч.</string>
+    <string name="time_period_days">д.</string>
+    <string name="time_period_months">м.</string>
+    <string name="time_period_years">г.</string>
+
+    <string name="dialog_register_vehicle_title">Регистрација на возило</string>
+    <string name="ok" translatable="false">OK</string>
+
+    <string name="detail_navigation_content_description">Назад</string>
+    <string name="car_content_description">Возило</string>
+    <string name="time_content_description">Време</string>
+    <string name="cost_content_description">Цена</string>
+
+    <string name="time_period_hours_single">час</string>
+    <string name="time_period_hours_few">часа</string>
+    <string name="time_period_hours_many">часови</string>
+
+    <string name="started">започнато</string>
+
+    <string name="macedonian_denars">денари</string>
+    <string name="denars_per_hour">ден./час</string>
+    <string name="action_map">Покажи на мапа</string>
+    <string name="cannot_open_map">Не постои соодветна апликација</string>
+    <string name="new_parking">Ново паркирање</string>
+
+    <string name="parking_navigation_content_description">Затвори</string>
+    <string name="location_permission_content_description">Дозвола за локација</string>
+    <string name="sms_permission_content_description">Дозвола за СМС</string>
+
+    <string name="location_unavailable">Локацијата е недостапна</string>
+    <string name="turn_on">Вклучи</string>
+    <string name="location_unavailable_message">Апликацијата не може автоматски да ја пронајде вашата зона без дозволата за локација.</string>
+    <string name="sms_unavailable">СМС е недостапен</string>
+    <string name="sms_unavailable_message">Без дозволата за СМС, апликацијата не може да функционира.</string>
+    <string name="zone_not_found">Не е пронајдена зона</string>
+    <string name="zone_not_found_message">Кликни тука за избор</string>
+    <string name="unlimited">Неограничено</string>
+    <string name="maximum">Најмногу</string>
+    <string name="action_send">Испрати</string>
+    <string name="vehicle">Возило</string>
+    <string name="cancel">Откажи</string>
+    <string name="zone">Зона</string>
+
+    <string name="sms_message">СМС Порака</string>
+    <string name="licence_wrong">Регистарската табличка е погрешна</string>
+    <string name="licence_check">Проверете ја регистарската табличка</string>
+
+    <string name="shared_element_transition_name" translatable="false">shared_element_transition</string>
+
+    <string name="please_allow_sms_permission">Ве молиме вклучете ја дозволата за СМС</string>
+
+</resources>
